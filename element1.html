@@ -6,9 +6,12 @@
     <title>Element dom</title>
   </head>
   <body>
-    <p id="p1">Lorem <span>ipsum</span> dolor sit amet.</p>
-    <p>Lorem amet ipsum dolor sit amet.</p>
-    <p class="p3">Lorem amet.</p>
+    <div>
+      <p id="p1">Lorem <span>ipsum</span> dolor sit amet.</p>
+      <p>Lorem amet ipsum dolor sit amet.</p>
+      <p class="p3">Lorem amet.</p>
+      <button id="btn">submit</button>
+    </div>
     <script>
       /*   console.log(document.getElementsByTagName("p")[0].tagName);
       console.log(document.getElementsByTagName("p")[0].id);
@@ -16,13 +19,22 @@
       console.log(document.getElementsByTagName("p")[0].innerText);
       document.getElementsByClassName("p3")[0].innerHTML = "modified content";
       document.getElementsByClassName("p3")[0].innerHTML =
-        "<p>hi <b>bro</b></p>"; */
+        "<p>hi <b>bro</b></p>"; 
       var colors = ["red", "blue", "black", "white", "orange"];
       document.getElementById("p1").style.color = colors[3];
       document.getElementById("p1").style.background = colors[2];
       document.getElementsByClassName("p3")[0].style.color = colors[3];
       document.getElementsByClassName("p3")[0].style.background = colors[4];
       document.getElementsByClassName("p3")[0].style.fontSize = "30px";
+      console.log(document.getElementById("p1").parentElement);
+      console.log(document.getElementById("btn").click());
+      document.getElementById("p1").remove();
+      var newPara = document.createElement("p");
+      newPara.innerHTML = "hi how are you";
+      document.getElementsByClassName("p3")[0].append(newPara);*/
+      document.getElementById("btn").addEventListener("click", () => {
+        console.log("button clicked");
+      });
     </script>
   </body>
 </html>
